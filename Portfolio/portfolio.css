@@ -85,6 +85,12 @@ footer {
   padding: 40px 0;
   margin-top: auto;
 }
+footer span {
+  margin-left: 20px;
+}
+footer .socials {
+  margin-right: 20px;
+}
 footer .wrap {
   display: flex;
   justify-content: space-between;
@@ -118,12 +124,12 @@ footer .wrap {
 } */
 
 :root {
-  --bg-color: #f4f7fb; /* page background color */
-  --text-color: #222831; /* main text color */
-  --card-bg: #ffffff; /* background for cards/boxes */
-  --accent-color: #4361ee; /* buttons, links, highlights */
-  --accent-hover: #3a0ca3; /* darker shade for hover effect */
-  --border-color: #d9e2ec; /* light borders between sections */
+  --bg-color: #f4f7fb;
+  --text-color: #222831;
+  --card-bg: #ffffff;
+  --accent-color: #4361ee;
+  --accent-hover: #3a0ca3;
+  --border-color: #d9e2ec;
 }
 .section {
   padding: 60px 10%;
@@ -240,7 +246,7 @@ footer .wrap {
 }
 .resume-table {
   width: 100%;
-  border-collapse: collapse; /* merges double borders into single lines */
+  border-collapse: collapse;
   margin: 20px 0;
   background-color: var(--card-bg);
 }
@@ -260,9 +266,9 @@ footer .wrap {
 .timeline {
   position: relative;
   max-width: 700px;
-  margin: 0 auto; /* centers the timeline horizontally */
+  margin: 0 auto;
   padding-left: 30px;
-  border-left: 3px solid var(--accent-color); /* the vertical line */
+  border-left: 3px solid var(--accent-color);
 }
 
 .timeline-item {
@@ -283,5 +289,58 @@ footer .wrap {
 }
 
 .timeline-item h4 {
+  color: var(--accent-color);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 180px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid var(--card-bg);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project-card-content {
+  padding: 15px;
+}
+
+.project-card-content h3 {
+  margin-bottom: 8px;
   color: var(--accent-color);
 }
